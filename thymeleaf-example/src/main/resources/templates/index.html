@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Todo list</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    </head>
+    <body>
+        <div class="container">
+            <h1 th:text="${header}">TODO LIST</h1>
+            <p th:text="${description}">Manage your works and tasks</p>
+            <div>
+                <form th:action="POST">
+                    <div class = "input-group">
+                        <input class="input" placeholder="Enter your task" />
+                        <button class="btn" type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+            <ul>
+                <li>
+                    <p class="todo-info">Do all home workd</p>
+                    <div class="function-group-btn">
+                        <select class="status-select">
+                            <option>New</option>
+                            <option>Working</option>
+                            <option>Done</option>
+                            <option>Cancel</option>
+                        </select>
+                        <button class="btn func-btn">update</button>
+                        <button class="btn func-btn" >Delete</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
